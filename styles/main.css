@@ -191,14 +191,27 @@ h1 {
   font-weight: 800;
   border-radius: 4rem;
   border-color: transparent;
-  padding: 2rem 3rem;
   color: #FAFAFA;
-  background: #855FB1;
 }
 
 .download-btn {
   padding: 2rem 4rem;
   background: #4D96A9;
+}
+
+.download-btn:hover {
+  cursor: pointer;
+  background: #71C0D4;
+}
+
+.info-btn {
+  padding: 2rem 3rem;
+  background: #855FB1;
+}
+
+.info-btn:hover {
+  cursor: pointer;
+  background: #B18BDD;
 }
 
 .version {
@@ -226,7 +239,6 @@ h1 {
 
 .step {
   min-height: 100%;
-  margin-bottom: 4rem;
 }
 
 .step::before {
@@ -326,25 +338,29 @@ h1 {
 }
 
 .section-download {
-  overflow: hidden;
   min-height: 100%;
+  position: relative;
+  margin-top: 10rem;
 }
 
-.step {
+.section-download .step {
   margin-bottom: 0;
+  position: absolute;
+  top: -10.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 9999;
 }
 
 .download-description {
   min-height: 100%;
   margin-bottom: -3rem;
-  z-index: -1;
+  z-index: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.9)), to(rgba(77, 150, 168, 0.9))), url("../assets/mobile/image-footer.jpg");
   background: linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)), url("../assets/mobile/image-footer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
-  top: -3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,15 +389,6 @@ h1 {
 .download-description p {
   font-weight: 600;
   font-size: 1.8rem;
-}
-
-.download-description .download-btn {
-  font-weight: 900;
-  background: #855FB1;
-}
-
-.download-description .version {
-  color: #D9B8FF;
 }
 
 @media screen and (min-width: 37rem) {
@@ -419,5 +426,19 @@ h1 {
     -ms-flex-preferred-size: 28%;
         flex-basis: 28%;
   }
+}
+
+.download-btn-purple {
+  font-weight: 900;
+  background: #855FB1;
+}
+
+.download-btn-purple:hover, .download-btn-purple:active {
+  cursor: pointer;
+  background: #B18BDD;
+}
+
+.download-description .version {
+  color: #D9B8FF;
 }
 /*# sourceMappingURL=main.css.map */

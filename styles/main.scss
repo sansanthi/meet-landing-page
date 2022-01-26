@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;800;900&display=swap');
+@import './variables';
+@import './general';
+
+// header
+.logo {
+    height: 2.8rem;
+}
+// hero img
+.section-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: 78rem) {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 6rem;
+    }
+
+}
+.hero-img {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+    @media screen and (min-width: 78rem) {
+        display: none;
+    }
+}
+.hero-img img {
+    display: block;
+    max-width: 110%;
+    
+}
+.hero-img--left,
+.hero-img--right {
+    display: none;
+    width: 120%;
+    @media screen and (min-width: 78rem) {
+        display: block;
+        
+    }
+}
+.hero-img--left {    
+    grid-column: 1;
+    justify-self: end;
+   
+}
+.hero-img--right {
+    grid-column: 3/-1;
+    justify-self: start;
+    
+}
+.description-box {
+    padding: 0 2.4rem;
+    margin-bottom: 2rem;
+    @media screen and (min-width: 37rem) {
+        max-width: 48rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+
+        h1{
+            font-size: 4.8rem;
+            max-width: 34rem;
+            margin: 0 auto;
+            margin-bottom: 2.4rem;
+        }
+    }
+    @media screen and (min-width: 78rem) {
+        grid-column: 2;
+        grid-row: 1;
+        margin-bottom: 0;
+        padding-top: 4rem 0 0 0;
+        h1 {
+            font-size: 6.4rem;
+            max-width: 100%;
+        }
+    }
+}
+
+.description-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: $color-gray;
+    margin-bottom: 2.75rem;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    @media screen and (min-width: 37rem) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+.btn {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-radius: 4rem;
+    border-color: transparent;
+    padding: 2rem 3rem;
+    color: $color-light-gray;
+    background: $primary-color-purple;
+}
+.download-btn {
+    padding: 2rem 4rem;
+    background: $primary-color-blue;
+}
+.version {
+    color: $color-light-blue;
+}
+
+// section usage
+.section-usage {
+    padding: 6rem 2.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    @media screen and (min-width: 61rem) {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+}
+.step {
+    min-height: 100%;
+    margin-bottom: 4rem;
+    &::before {
+        content: "";
+        display: block;
+        height: 8rem;
+        width: 1px;
+        background: rgba($color: $color-gray, $alpha: 0.2);
+        margin: 0 auto;
+    }
+}
+
+.step-number {
+    font-weight: 800;
+    color: $color-gray;
+    background: $color-light-gray;
+    width: 5.4rem;
+    height: 5.4rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid rgba($color: $color-gray, $alpha: 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    @media screen and (min-width: 37rem){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.show-img {
+    width: 100%;
+    border-radius: 1rem;
+    @media screen and (min-width: 37rem){
+        max-width: 100%;
+    }
+
+}
+.usage-description {
+    text-align: center;
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        color: $primary-color-blue;
+        margin-bottom: 2rem;
+    }
+    h2 {
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 1.1;
+        color: $color-dark-blue;
+        margin-bottom: 2rem;
+    }
+    @media screen and (min-width: 37rem) {
+        max-width: 58rem;
+        margin: 0 auto;
+
+        h2{
+            font-size: 4rem;
+            max-width: 42rem;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+    }
+    @media screen and (min-width: 61rem) {
+        max-width: 52rem;
+    }
+    
+}
+.section-download {
+    overflow: hidden;
+    min-height: 100%;    
+}
+.step {
+    margin-bottom: 0;
+    z-index: 9999;
+}
+
+.download-description {
+    min-height: 100%;
+    // to remove whitspace at the bottom
+    margin-bottom: -3rem;
+    z-index: -1;
+    background: linear-gradient(hsla(192, 37%, 48%, 0.9), hsla(192, 37%, 48%, 0.9)), url('../assets/mobile/image-footer.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;    
+    position: relative;
+    top: -3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 8rem 2.75rem;
+    text-align: center;
+    color: $color-light-gray;
+    
+    h2{
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 1.2;        
+    }
+    p {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+    .download-btn {
+        font-weight: 900;
+        background: $primary-color-purple;
+    }
+    .version {
+        color: $color-light-purple;
+    }
+    @media screen and (min-width: 37rem) {        
+        padding: 8rem 10rem;
+        background: linear-gradient(hsla(192, 37%, 48%, 0.9), hsla(192, 37%, 48%, 0.9)), url('../assets/tablet/image-footer.jpg') no-repeat;
+        background-size: cover;
+        h2 {
+            font-size: 4rem;
+            max-width: 34rem;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (min-width: 67rem) {
+        background: linear-gradient(hsla(192, 37%, 48%, 0.9), hsla(192, 37%, 48%, 0.9)), url('../assets/desktop/image-footer.jpg') no-repeat;
+        background-size: cover;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 4.6rem;
+        text-align: left;
+        h2 {
+            margin: 0;
+        }
+        p {
+            flex-basis: 28%;
+        }
+    }
+}

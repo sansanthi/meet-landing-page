@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+header {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #28283D;
+  line-height: 1.2;
+  margin-bottom: 2.75rem;
+}
+
+.logo {
+  height: 2.8rem;
+}
+
+.section-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (min-width: 78rem) {
+  .section-main {
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    margin-bottom: 6rem;
+  }
+}
+
+.hero-img {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6rem;
+}
+
+@media screen and (min-width: 78rem) {
+  .hero-img {
+    display: none;
+  }
+}
+
+.hero-img img {
+  display: block;
+  max-width: 110%;
+}
+
+.hero-img--left,
+.hero-img--right {
+  display: none;
+  width: 120%;
+}
+
+@media screen and (min-width: 78rem) {
+  .hero-img--left,
+  .hero-img--right {
+    display: block;
+  }
+}
+
+.hero-img--left {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.hero-img--right {
+  grid-column: 3/-1;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.description-box {
+  padding: 0 2.4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 37rem) {
+  .description-box {
+    max-width: 48rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .description-box h1 {
+    font-size: 4.8rem;
+    max-width: 34rem;
+    margin: 0 auto;
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 78rem) {
+  .description-box {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+    padding-top: 4rem 0 0 0;
+  }
+  .description-box h1 {
+    font-size: 6.4rem;
+    max-width: 100%;
+  }
+}
+
+.description-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #87879D;
+  margin-bottom: 2.75rem;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 37rem) {
+  .btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.btn {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  border-radius: 4rem;
+  border-color: transparent;
+  padding: 2rem 3rem;
+  color: #FAFAFA;
+  background: #855FB1;
+}
+
+.download-btn {
+  padding: 2rem 4rem;
+  background: #4D96A9;
+}
+
+.version {
+  color: #8FE3F9;
+}
+
+.section-usage {
+  padding: 6rem 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.8rem;
+}
+
+@media screen and (min-width: 61rem) {
+  .section-usage {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+.step {
+  min-height: 100%;
+  margin-bottom: 4rem;
+}
+
+.step::before {
+  content: "";
+  display: block;
+  height: 8rem;
+  width: 1px;
+  background: rgba(135, 135, 157, 0.2);
+  margin: 0 auto;
+}
+
+.step-number {
+  font-weight: 800;
+  color: #87879D;
+  background: #FAFAFA;
+  width: 5.4rem;
+  height: 5.4rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid rgba(135, 135, 157, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.img-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 37rem) {
+  .img-box {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.show-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 37rem) {
+  .show-img {
+    max-width: 100%;
+  }
+}
+
+.usage-description {
+  text-align: center;
+}
+
+.usage-description h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #4D96A9;
+  margin-bottom: 2rem;
+}
+
+.usage-description h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #28283D;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 37rem) {
+  .usage-description {
+    max-width: 58rem;
+    margin: 0 auto;
+  }
+  .usage-description h2 {
+    font-size: 4rem;
+    max-width: 42rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 61rem) {
+  .usage-description {
+    max-width: 52rem;
+  }
+}
+
+.section-download {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.step {
+  margin-bottom: 0;
+  z-index: 9999;
+}
+
+.download-description {
+  min-height: 100%;
+  margin-bottom: -3rem;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.9)), to(rgba(77, 150, 168, 0.9))), url("../assets/mobile/image-footer.jpg");
+  background: linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)), url("../assets/mobile/image-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  padding: 8rem 2.75rem;
+  text-align: center;
+  color: #FAFAFA;
+}
+
+.download-description h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.download-description p {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.download-description .download-btn {
+  font-weight: 900;
+  background: #855FB1;
+}
+
+.download-description .version {
+  color: #D9B8FF;
+}
+
+@media screen and (min-width: 37rem) {
+  .download-description {
+    padding: 8rem 10rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.9)), to(rgba(77, 150, 168, 0.9))), url("../assets/tablet/image-footer.jpg") no-repeat;
+    background: linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)), url("../assets/tablet/image-footer.jpg") no-repeat;
+    background-size: cover;
+  }
+  .download-description h2 {
+    font-size: 4rem;
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 67rem) {
+  .download-description {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.9)), to(rgba(77, 150, 168, 0.9))), url("../assets/desktop/image-footer.jpg") no-repeat;
+    background: linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)), url("../assets/desktop/image-footer.jpg") no-repeat;
+    background-size: cover;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 4.6rem;
+    text-align: left;
+  }
+  .download-description h2 {
+    margin: 0;
+  }
+  .download-description p {
+    -ms-flex-preferred-size: 28%;
+        flex-basis: 28%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
